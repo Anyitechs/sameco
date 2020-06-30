@@ -1,5 +1,5 @@
 /**
- * Starts the application on the port specified.
+ * Starts the application on the port specified correctly.
  */
 
 const api = require('./src/api');
