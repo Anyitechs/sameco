@@ -43,7 +43,7 @@ require('./overhead')(routes);
 
 // Add the routes to the /api endpoint
 app.use('/api', routes);
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.send('App started!')
 })
 // Exposes the build of the frontend
