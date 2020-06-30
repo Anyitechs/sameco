@@ -43,22 +43,24 @@ require('./overhead')(routes);
 
 // Add the routes to the /api endpoint
 app.use('/api', routes);
-
+app.get('/', (req, res) => {
+  res.send('App started!')
+})
 // Exposes the build of the frontend
 // to the root / of the server
-const frontendDir = path.join(
-  __dirname,
-  '../../../frontend/dist',
-);
+// const frontendDir = path.join(
+//   __dirname,
+//   '../../../frontend/dist',
+// );
 
-if (fs.existsSync(frontendDir)) {
-  app.use('/', express.static(frontendDir));
+// if (fs.existsSync(frontendDir)) {
+//   app.use('/', express.static(frontendDir));
 
-  app.get('*', function(request, response) {
-    response.sendFile(
-      path.resolve(frontendDir, 'index.html'),
-    );
-  });
-}
+//   app.get('*', function(request, response) {
+//     response.sendFile(
+//       path.resolve(frontendDir, 'index.html'),
+//     );
+//   });
+// }
 
 module.exports = app;
