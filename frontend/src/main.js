@@ -25,7 +25,7 @@ import PortalVue from 'portal-vue';
   Vue.use(Vuex);
   setupComponentsFiltersDirectivesAndMixins();
 
-  // eslint-disable-next-line
+  // eslint-disable-next-line hello
   new Vue({
     store: storeAsync(),
     router: routerAsync(),
